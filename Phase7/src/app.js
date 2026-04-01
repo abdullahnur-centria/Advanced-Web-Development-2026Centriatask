@@ -29,8 +29,8 @@ app.get("/resources", (req, res) => {
   res.sendFile(path.join(__dirname, 'views/resources.html'));
 });
 
-// PROTECTED ROUTE: Now using the teacher's exact security guard!
-app.get("/reservations", requireAuth, (req, res) => {
+
+app.get("/reservations", (req, res) => {
   res.sendFile(path.join(__dirname, 'views/reservations.html'));
 });
 
