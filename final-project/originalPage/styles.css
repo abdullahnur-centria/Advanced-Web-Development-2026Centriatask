@@ -1,0 +1,205 @@
+/* Reset & Base Styles
+Author: Md Abdullah Ibne Shahid Nur
+Date: 2025-11-19 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background-color: #ffb703;
+  color: #000;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav h1 {
+  font-size: 2rem;
+}
+
+main {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.hero figure {
+  max-width: 600px;
+  width: 100%;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.hero-text {
+  margin-top: 1rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #fb8500;
+}
+
+/* About Section */
+.about {
+  padding: 2rem 1rem;
+  background-color: #edf6f9;
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+  color: #023047;
+}
+
+/* Features Section */
+.features {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.features h2 {
+  color: #219ebc;
+  margin-bottom: 1rem;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+/* Product Highlights Section */
+.products {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.products h2 {
+  color: #023047;
+  margin-bottom: 1.5rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #fb8500;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* CTA Section */
+.cta {
+  padding: 2rem 1rem;
+  background-color: #8ecae6;
+  text-align: center;
+  color: #023047;
+}
+
+.cta button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #023047;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cta button:hover {
+  background-color: #035f8e;
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer .social a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+  color: #fb8500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
