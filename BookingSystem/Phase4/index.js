@@ -49,6 +49,8 @@ const resourceValidators = [
     .trim()
     // FIX 2: Added length validation for resourceName
     .isLength({ min: 5, max: 30 }).withMessage('resourceName must be 5-30 characters')
+    // MATCHES FRONTEND: Strict regex for letters, numbers, and spaces
+    .matches(/^[a-zA-Z0-9äöåÄÖÅ ]+$/).withMessage('resourceName contains invalid characters')
     .escape(),
 
   body('resourceDescription')
@@ -56,8 +58,8 @@ const resourceValidators = [
     .isString().withMessage('resourceDescription must be a string')
     .trim()
     .isLength({ min:10, max: 50 }).withMessage('resourceDescription must be 10-50 characters')
-    // FIX 3: Added regex custom validation to block HTML/Script tags like <script>
-    .custom(value => !/<.*?>/.test(value)).withMessage('Invalid value'),
+    // FIX 3: Replaced weak HTML check with strict frontend regex
+    .matches(/^[a-zA-Z0-9äöåÄÖÅ ]+$/).withMessage('resourceDescription contains invalid characters'),
 
   body('resourceAvailable')
     .exists({ checkFalsy: true }).withMessage('resourceAvailable is required')

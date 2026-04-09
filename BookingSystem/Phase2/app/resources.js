@@ -72,7 +72,7 @@ function validateAll() {
   const isNameValid = /^[a-zA-Z0-9äöåÄÖÅ ]+$/.test(nameVal) && nameVal.length >= 5 && nameVal.length <= 30;
 
   const descVal = descInput.value.trim();
-  const isDescValid = /^[a-zA-Z0-9äöåÄÖÅ\s.,!?]+$/.test(descVal) && descVal.length >= 10 && descVal.length <= 50;
+  const isDescValid = /^[a-zA-Z0-9äöåÄÖÅ\s]+$/.test(descVal) && descVal.length >= 10 && descVal.length <= 50;
 
   setInputVisualState(nameInput, isNameValid);
   setInputVisualState(descInput, isDescValid);

@@ -18,7 +18,7 @@ async function onSubmit(event) {
     resourceName: ($("resourceName")?.value ?? "").trim(),
     resourceDescription: ($("resourceDescription")?.value ?? "").trim(),
     resourceAvailable: $("resourceAvailable")?.checked ?? false,
-    resourcePrice: $("resourcePrice")?.value ?? "0",
+    resourcePrice: $("resourcePrice")?.value || "0",
     resourcePriceUnit: document.querySelector('input[name="resourcePriceUnit"]:checked')?.value ?? "hour"
   };
 
